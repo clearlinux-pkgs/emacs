@@ -1,0 +1,1 @@
+--without-xft --without-m17n-flt --without-libotf --without-xaw3d --with-x-toolkit=no
