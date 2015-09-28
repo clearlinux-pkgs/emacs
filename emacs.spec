@@ -4,7 +4,7 @@
 #
 Name     : emacs
 Version  : 24.5
-Release  : 12
+Release  : 13
 URL      : http://mirrors.axint.net/repos/gnu.org/emacs/emacs-24.5.tar.xz
 Source0  : http://mirrors.axint.net/repos/gnu.org/emacs/emacs-24.5.tar.xz
 Summary  : No detailed summary available
