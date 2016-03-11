@@ -4,7 +4,7 @@
 #
 Name     : emacs
 Version  : 24.5
-Release  : 13
+Release  : 14
 URL      : http://mirrors.axint.net/repos/gnu.org/emacs/emacs-24.5.tar.xz
 Source0  : http://mirrors.axint.net/repos/gnu.org/emacs/emacs-24.5.tar.xz
 Summary  : No detailed summary available
@@ -56,9 +56,12 @@ doc components for the emacs package.
 
 %build
 %configure --disable-static --without-xft --without-m17n-flt --without-libotf --without-xaw3d --with-x-toolkit=no
-make V=1 %{?_smp_mflags}
+make V=1  %{?_smp_mflags}
 
 %check
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
@@ -67,8 +70,8 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-/var/games/emacs/snake-scores
-/var/games/emacs/tetris-scores
+%exclude /var/games/emacs/snake-scores
+%exclude /var/games/emacs/tetris-scores
 
 %files bin
 %defattr(-,root,root,-)
