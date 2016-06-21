@@ -2,3 +2,5 @@
 # names, one per line.
 /var/games/emacs/snake-scores
 /var/games/emacs/tetris-scores
+/usr/bin/ctags
+/usr/bin/etags
