@@ -4,7 +4,7 @@
 #
 Name     : emacs
 Version  : 24.5
-Release  : 16
+Release  : 17
 URL      : http://mirrors.axint.net/repos/gnu.org/emacs/emacs-24.5.tar.xz
 Source0  : http://mirrors.axint.net/repos/gnu.org/emacs/emacs-24.5.tar.xz
 Summary  : No detailed summary available
@@ -75,12 +75,12 @@ rm -rf %{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/ctags
+%exclude /usr/bin/ctags
+%exclude /usr/bin/etags
 /usr/bin/ebrowse
 /usr/bin/emacs
 /usr/bin/emacs-24.5
 /usr/bin/emacsclient
-/usr/bin/etags
 /usr/bin/grep-changelog
 /usr/libexec/emacs/24.5/x86_64-generic-linux-gnu/hexl
 /usr/libexec/emacs/24.5/x86_64-generic-linux-gnu/movemail
