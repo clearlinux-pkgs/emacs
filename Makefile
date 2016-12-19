@@ -1,5 +1,5 @@
 PKG_NAME := emacs
-URL := http://gnu.mirrors.pair.com/gnu/emacs/emacs-25.1.tar.xz
-ARCHIVES :=
+URL := https://mirrors.kernel.org/gnu/emacs/emacs-25.1.tar.xz
+
 
 include ../common/Makefile.common
