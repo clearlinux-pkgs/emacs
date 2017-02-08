@@ -4,7 +4,7 @@
 #
 Name     : emacs
 Version  : 25.1
-Release  : 20
+Release  : 21
 URL      : https://mirrors.kernel.org/gnu/emacs/emacs-25.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/emacs/emacs-25.1.tar.xz
 Summary  : No detailed summary available
