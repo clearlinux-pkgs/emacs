@@ -1,17 +1,23 @@
-2016-09-15  Nicolas Petton  <nicolas@petton.fr>
+2017-04-20  Nicolas Petton  <nicolas@petton.fr>
 
-	* etc/AUTHORS: Regenerate the AUTHORS file
+	Set Emacs version to 25.2 and update AUTHORS file
+
+	* README: Set Emacs version to 25.2.
+	* etc/HISTORY: Add release log.
+	* lisp/ldefs-boot.el:
+	* etc/AUTHORS:
+	* ChangeLog.2: Update.
 
 This file records repository revisions from
-commit 0ffc9cef49b0fceb3c5e904837ea5675fe4306ac (exclusive) to
-commit f0eb70d8935be90f7c03e187c12d9b60e7214cc6 (inclusive).
+commit 56a4461a48d5803fbc979924475da4b3621ea0f5 (exclusive) to
+commit 3a34412caae002accd0fc7a7fc0b718c2f34159b (inclusive).
 See ChangeLog.2 for earlier changes.
 
 ;; Local Variables:
 ;; coding: utf-8
 ;; End:
 
-  Copyright (C) 2016 Free Software Foundation, Inc.
+  Copyright (C) 2017 Free Software Foundation, Inc.
 
   This file is part of GNU Emacs.
 
