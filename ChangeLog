@@ -1,16 +1,7 @@
-2017-04-20  Nicolas Petton  <nicolas@petton.fr>
-
-	Set Emacs version to 25.2 and update AUTHORS file
-
-	* README: Set Emacs version to 25.2.
-	* etc/HISTORY: Add release log.
-	* lisp/ldefs-boot.el:
-	* etc/AUTHORS:
-	* ChangeLog.2: Update.
 
 This file records repository revisions from
-commit 56a4461a48d5803fbc979924475da4b3621ea0f5 (exclusive) to
-commit 3a34412caae002accd0fc7a7fc0b718c2f34159b (inclusive).
+commit 3a34412caae002accd0fc7a7fc0b718c2f34159b (exclusive) to
+commit 784602b10506c50075aa9463891a47380ebea55f (inclusive).
 See ChangeLog.2 for earlier changes.
 
 ;; Local Variables:
