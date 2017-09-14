@@ -6,7 +6,7 @@
 #
 Name     : emacs
 Version  : 25.3
-Release  : 28
+Release  : 29
 URL      : https://mirrors.kernel.org/gnu/emacs/emacs-25.3.tar.gz
 Source0  : https://mirrors.kernel.org/gnu/emacs/emacs-25.3.tar.gz
 Source99 : https://mirrors.kernel.org/gnu/emacs/emacs-25.3.tar.gz.sig
@@ -59,12 +59,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505160818
+export SOURCE_DATE_EPOCH=1505362853
 %configure --disable-static --without-xft --without-m17n-flt --without-libotf --without-xaw3d --with-x-toolkit=no --with-sound=no
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1505160818
+export SOURCE_DATE_EPOCH=1505362853
 rm -rf %{buildroot}
 %make_install
 
@@ -89,7 +89,6 @@ rm -rf %{buildroot}
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/
 /usr/share/appdata/emacs.appdata.xml
 /usr/share/applications/emacs.desktop
 /usr/share/emacs/25.3/etc/AUTHORS
