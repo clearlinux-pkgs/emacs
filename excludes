@@ -4,3 +4,6 @@
 /var/games/emacs/tetris-scores
 /usr/bin/ctags
 /usr/bin/etags
+
+# xemacs package will install the desktop file.
+/usr/share/applications/emacs.desktop
