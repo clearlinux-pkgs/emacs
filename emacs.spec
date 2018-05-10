@@ -6,7 +6,7 @@
 #
 Name     : emacs
 Version  : 25.3
-Release  : 31
+Release  : 32
 URL      : https://mirrors.kernel.org/gnu/emacs/emacs-25.3.tar.gz
 Source0  : https://mirrors.kernel.org/gnu/emacs/emacs-25.3.tar.gz
 Source99 : https://mirrors.kernel.org/gnu/emacs/emacs-25.3.tar.gz.sig
