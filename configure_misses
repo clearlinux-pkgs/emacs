@@ -1,19 +1,18 @@
 Configure miss: xcrun
 Configure miss: whether the compiler is clang
-Configure miss: whether C compiler handles -Werror -Wunknown-warning-option
 Configure miss: setfattr
 Configure miss: paxctl
 Configure miss: whether addresses are sanitized
 Configure miss: coff.h
 Configure miss: malloc/malloc.h
-Configure miss: maillock.h
 Configure miss: struct ifreq.ifr_addr.sa_len
 Configure miss: X
 Configure miss: whether malloc is Doug Lea style
 Configure miss: main in -lXbsd
 Configure miss: lgetfilecon in -lselinux
-Configure miss: LIBGNUTLS
+Configure miss: LIBSYSTEMD
 Configure miss: jpeglib 6b or later
+Configure miss: library containing cmsCreateTransform
 Configure miss: library containing inflateEnd
 Configure miss: gpm.h usability
 Configure miss: gpm.h presence
@@ -21,13 +20,12 @@ Configure miss: gpm.h
 Configure miss: maillock in -lmail
 Configure miss: maillock in -llockfile
 Configure miss: liblockfile.so
-Configure miss: valgrind/valgrind.h usability
-Configure miss: valgrind/valgrind.h presence
-Configure miss: valgrind/valgrind.h
+Configure miss: maillock.h usability
+Configure miss: maillock.h presence
+Configure miss: maillock.h
 Configure miss: whether GLib is linked in
 Configure miss: st_dm_mode in struct stat
 Configure miss: whether strmode is declared
-Configure miss: whether stdint.h predates C++11
 Configure miss: acl_delete_fd_np
 Configure miss: acl_delete_file_np
 Configure miss: acl_copy_ext_native

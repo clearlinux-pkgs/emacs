@@ -1,17 +1,23 @@
-2017-09-11  Nicolas Petton  <nicolas@petton.fr>
+2018-05-28  Nicolas Petton  <nicolas@petton.fr>
 
-	* Version 25.3 released.
+	* Version 26.1 released.
+
+2018-05-25  Nicolas Petton  <nicolas@petton.fr>
+
+	* etc/HISTORY: Update for Emacs 26.1 release.
+
+	* etc/AUTHORS: Update.
 
 This file records repository revisions from
-commit 3a34412caae002accd0fc7a7fc0b718c2f34159b (exclusive) to
-commit 784602b10506c50075aa9463891a47380ebea55f (inclusive).
-See ChangeLog.2 for earlier changes.
+commit 35574609dd09e2eab0301309b0e3bf831f627fcc (exclusive) to
+commit 07f8f9bc5a51f5aa94eb099f3e15fbe0c20ea1ea (inclusive).
+See ChangeLog.3 for earlier changes.
 
 ;; Local Variables:
 ;; coding: utf-8
 ;; End:
 
-  Copyright (C) 2017 Free Software Foundation, Inc.
+  Copyright (C) 2018 Free Software Foundation, Inc.
 
   This file is part of GNU Emacs.
 
@@ -26,4 +32,4 @@ See ChangeLog.2 for earlier changes.
   GNU General Public License for more details.
 
   You should have received a copy of the GNU General Public License
-  along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
+  along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.
