@@ -1,0 +1,6 @@
+26.2
+acl-dev
+ncurses-dev
+pkgconfig(zlib)
+valgrind
+zlib-dev

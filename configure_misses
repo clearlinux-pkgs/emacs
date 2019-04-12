@@ -13,7 +13,6 @@ Configure miss: lgetfilecon in -lselinux
 Configure miss: LIBSYSTEMD
 Configure miss: jpeglib 6b or later
 Configure miss: library containing cmsCreateTransform
-Configure miss: library containing inflateEnd
 Configure miss: gpm.h usability
 Configure miss: gpm.h presence
 Configure miss: gpm.h
