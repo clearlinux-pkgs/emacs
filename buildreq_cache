@@ -1,6 +1,8 @@
 26.2
 acl-dev
+llvm
 ncurses-dev
 pkgconfig(zlib)
+systemd-dev
 valgrind
 zlib-dev

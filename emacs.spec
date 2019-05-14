@@ -6,11 +6,11 @@
 #
 Name     : emacs
 Version  : 26.2
-Release  : 34
+Release  : 35
 URL      : https://mirrors.kernel.org/gnu/emacs/emacs-26.2.tar.gz
 Source0  : https://mirrors.kernel.org/gnu/emacs/emacs-26.2.tar.gz
 Source99 : https://mirrors.kernel.org/gnu/emacs/emacs-26.2.tar.gz.sig
-Summary  : The extensible, customizable, self-documenting real-time display editor
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GPL-3.0 GPL-3.0+
 Requires: emacs-bin = %{version}-%{release}
@@ -20,20 +20,20 @@ Requires: emacs-license = %{version}-%{release}
 Requires: emacs-man = %{version}-%{release}
 BuildRequires : acl-dev
 BuildRequires : gnutls-dev
+BuildRequires : llvm
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(dbus-1)
 BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(zlib)
+BuildRequires : systemd-dev
 BuildRequires : valgrind
 BuildRequires : zlib-dev
+Patch1: 0001-Make-the-emacs-compiled-without-X11-call-the-one-com.patch
 
 %description
-eterm-color.ti is a terminfo source file.  eterm-color is a compiled
-version produced by the terminfo compiler (tic).  The compiled files
-are binary, and depend on the version of tic, but they seem to be
-system-independent and backwardly compatible.  So there should be no
-need to recompile the distributed binary version.  If it is
-necessary, use:
+See the end of the file for license conditions.
+This directory tree holds version 26.2 of GNU Emacs, the extensible,
+customizable, self-documenting real-time display editor.
 
 %package bin
 Summary: bin components for the emacs package.
@@ -102,18 +102,20 @@ man components for the emacs package.
 
 %prep
 %setup -q -n emacs-26.2
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1555088593
+export SOURCE_DATE_EPOCH=1557874987
+export LDFLAGS="${LDFLAGS} -fno-lto"
 %configure --disable-static --without-xft --without-m17n-flt --without-libotf --without-xaw3d --with-x-toolkit=no --with-sound=no
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1555088593
+export SOURCE_DATE_EPOCH=1557874987
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/emacs
 cp COPYING %{buildroot}/usr/share/package-licenses/emacs/COPYING

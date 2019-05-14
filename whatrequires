@@ -8,6 +8,7 @@ compat-protobuf-soname15
 gettext
 global
 gnuplot
+gpm
 guile
 libidn
 protobuf

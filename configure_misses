@@ -1,4 +1,7 @@
 Configure miss: xcrun
+Configure miss: x86_64-generic-linux-gnu-clang
+Configure miss: x86_64-generic-linux-gnu-
+Configure miss: x86_64-generic-linux-gnu-
 Configure miss: whether the compiler is clang
 Configure miss: setfattr
 Configure miss: paxctl
@@ -10,7 +13,6 @@ Configure miss: X
 Configure miss: whether malloc is Doug Lea style
 Configure miss: main in -lXbsd
 Configure miss: lgetfilecon in -lselinux
-Configure miss: LIBSYSTEMD
 Configure miss: jpeglib 6b or later
 Configure miss: library containing cmsCreateTransform
 Configure miss: gpm.h usability
