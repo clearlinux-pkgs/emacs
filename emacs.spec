@@ -6,11 +6,11 @@
 #
 Name     : emacs
 Version  : 26.2
-Release  : 35
+Release  : 36
 URL      : https://mirrors.kernel.org/gnu/emacs/emacs-26.2.tar.gz
 Source0  : https://mirrors.kernel.org/gnu/emacs/emacs-26.2.tar.gz
 Source99 : https://mirrors.kernel.org/gnu/emacs/emacs-26.2.tar.gz.sig
-Summary  : No detailed summary available
+Summary  : The extensible, customizable, self-documenting real-time display editor
 Group    : Development/Tools
 License  : CC0-1.0 GPL-3.0 GPL-3.0+
 Requires: emacs-bin = %{version}-%{release}
@@ -20,6 +20,7 @@ Requires: emacs-license = %{version}-%{release}
 Requires: emacs-man = %{version}-%{release}
 BuildRequires : acl-dev
 BuildRequires : gnutls-dev
+BuildRequires : gpm-dev
 BuildRequires : llvm
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(dbus-1)
@@ -31,9 +32,12 @@ BuildRequires : zlib-dev
 Patch1: 0001-Make-the-emacs-compiled-without-X11-call-the-one-com.patch
 
 %description
-See the end of the file for license conditions.
-This directory tree holds version 26.2 of GNU Emacs, the extensible,
-customizable, self-documenting real-time display editor.
+eterm-color.ti is a terminfo source file.  eterm-color is a compiled
+version produced by the terminfo compiler (tic).  The compiled files
+are binary, and depend on the version of tic, but they seem to be
+system-independent and backwardly compatible.  So there should be no
+need to recompile the distributed binary version.  If it is
+necessary, use:
 
 %package bin
 Summary: bin components for the emacs package.
@@ -60,6 +64,7 @@ Group: Development
 Requires: emacs-bin = %{version}-%{release}
 Requires: emacs-data = %{version}-%{release}
 Provides: emacs-devel = %{version}-%{release}
+Requires: emacs = %{version}-%{release}
 Requires: emacs = %{version}-%{release}
 
 %description dev
@@ -109,13 +114,19 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1557874987
-export LDFLAGS="${LDFLAGS} -fno-lto"
+export SOURCE_DATE_EPOCH=1558514841
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static --without-xft --without-m17n-flt --without-libotf --without-xaw3d --with-x-toolkit=no --with-sound=no
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1557874987
+export SOURCE_DATE_EPOCH=1558514841
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/emacs
 cp COPYING %{buildroot}/usr/share/package-licenses/emacs/COPYING

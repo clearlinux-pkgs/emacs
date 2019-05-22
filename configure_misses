@@ -1,7 +1,4 @@
 Configure miss: xcrun
-Configure miss: x86_64-generic-linux-gnu-clang
-Configure miss: x86_64-generic-linux-gnu-
-Configure miss: x86_64-generic-linux-gnu-
 Configure miss: whether the compiler is clang
 Configure miss: setfattr
 Configure miss: paxctl
@@ -15,9 +12,6 @@ Configure miss: main in -lXbsd
 Configure miss: lgetfilecon in -lselinux
 Configure miss: jpeglib 6b or later
 Configure miss: library containing cmsCreateTransform
-Configure miss: gpm.h usability
-Configure miss: gpm.h presence
-Configure miss: gpm.h
 Configure miss: maillock in -lmail
 Configure miss: maillock in -llockfile
 Configure miss: liblockfile.so

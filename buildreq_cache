@@ -1,5 +1,6 @@
 26.2
 acl-dev
+gpm-dev
 llvm
 ncurses-dev
 pkgconfig(zlib)
