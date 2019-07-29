@@ -5,6 +5,7 @@ compat-guile-soname20
 compat-libidn-soname11
 compat-protobuf-soname14
 compat-protobuf-soname15
+emacs-x11
 gettext
 global
 gnuplot

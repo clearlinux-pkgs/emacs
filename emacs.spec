@@ -6,11 +6,11 @@
 #
 Name     : emacs
 Version  : 26.2
-Release  : 36
+Release  : 37
 URL      : https://mirrors.kernel.org/gnu/emacs/emacs-26.2.tar.gz
 Source0  : https://mirrors.kernel.org/gnu/emacs/emacs-26.2.tar.gz
-Source99 : https://mirrors.kernel.org/gnu/emacs/emacs-26.2.tar.gz.sig
-Summary  : The extensible, customizable, self-documenting real-time display editor
+Source1 : https://mirrors.kernel.org/gnu/emacs/emacs-26.2.tar.gz.sig
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GPL-3.0 GPL-3.0+
 Requires: emacs-bin = %{version}-%{release}
@@ -32,12 +32,9 @@ BuildRequires : zlib-dev
 Patch1: 0001-Make-the-emacs-compiled-without-X11-call-the-one-com.patch
 
 %description
-eterm-color.ti is a terminfo source file.  eterm-color is a compiled
-version produced by the terminfo compiler (tic).  The compiled files
-are binary, and depend on the version of tic, but they seem to be
-system-independent and backwardly compatible.  So there should be no
-need to recompile the distributed binary version.  If it is
-necessary, use:
+See the end of the file for license conditions.
+This directory tree holds version 26.2 of GNU Emacs, the extensible,
+customizable, self-documenting real-time display editor.
 
 %package bin
 Summary: bin components for the emacs package.
@@ -64,7 +61,6 @@ Group: Development
 Requires: emacs-bin = %{version}-%{release}
 Requires: emacs-data = %{version}-%{release}
 Provides: emacs-devel = %{version}-%{release}
-Requires: emacs = %{version}-%{release}
 Requires: emacs = %{version}-%{release}
 
 %description dev
@@ -113,8 +109,9 @@ man components for the emacs package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1558514841
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1564438212
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -126,7 +123,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1558514841
+export SOURCE_DATE_EPOCH=1564438212
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/emacs
 cp COPYING %{buildroot}/usr/share/package-licenses/emacs/COPYING
@@ -140,6 +137,12 @@ cp msdos/COPYING %{buildroot}/usr/share/package-licenses/emacs/msdos_COPYING
 cp nt/COPYING %{buildroot}/usr/share/package-licenses/emacs/nt_COPYING
 cp src/COPYING %{buildroot}/usr/share/package-licenses/emacs/src_COPYING
 %make_install
+## Remove excluded files
+rm -f %{buildroot}/var/games/emacs/snake-scores
+rm -f %{buildroot}/var/games/emacs/tetris-scores
+rm -f %{buildroot}/usr/bin/ctags
+rm -f %{buildroot}/usr/bin/etags
+rm -f %{buildroot}/usr/share/applications/emacs.desktop
 
 %files
 %defattr(-,root,root,-)
@@ -147,8 +150,6 @@ cp src/COPYING %{buildroot}/usr/share/package-licenses/emacs/src_COPYING
 
 %files bin
 %defattr(-,root,root,-)
-%exclude /usr/bin/ctags
-%exclude /usr/bin/etags
 /usr/bin/ebrowse
 /usr/bin/emacs
 /usr/bin/emacs-26.2
@@ -156,7 +157,6 @@ cp src/COPYING %{buildroot}/usr/share/package-licenses/emacs/src_COPYING
 
 %files data
 %defattr(-,root,root,-)
-%exclude /usr/share/applications/emacs.desktop
 /usr/share/emacs/26.2/etc/AUTHORS
 /usr/share/emacs/26.2/etc/CALC-NEWS
 /usr/share/emacs/26.2/etc/CENSORSHIP
