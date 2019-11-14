@@ -6,7 +6,7 @@
 #
 Name     : emacs
 Version  : 26.3
-Release  : 38
+Release  : 39
 URL      : https://mirrors.kernel.org/gnu/emacs/emacs-26.3.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/emacs/emacs-26.3.tar.xz
 Source1 : https://mirrors.kernel.org/gnu/emacs/emacs-26.3.tar.xz.sig
@@ -15,12 +15,14 @@ Group    : Development/Tools
 License  : CC0-1.0 GPL-3.0 GPL-3.0+
 Requires: emacs-bin = %{version}-%{release}
 Requires: emacs-data = %{version}-%{release}
+Requires: emacs-info = %{version}-%{release}
 Requires: emacs-libexec = %{version}-%{release}
 Requires: emacs-license = %{version}-%{release}
 Requires: emacs-man = %{version}-%{release}
 BuildRequires : acl-dev
 BuildRequires : gnutls-dev
 BuildRequires : gpm-dev
+BuildRequires : llvm
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(dbus-1)
 BuildRequires : pkgconfig(libxml-2.0)
@@ -66,13 +68,12 @@ Requires: emacs = %{version}-%{release}
 dev components for the emacs package.
 
 
-%package doc
-Summary: doc components for the emacs package.
-Group: Documentation
-Requires: emacs-man = %{version}-%{release}
+%package info
+Summary: info components for the emacs package.
+Group: Default
 
-%description doc
-doc components for the emacs package.
+%description info
+info components for the emacs package.
 
 
 %package libexec
@@ -102,6 +103,7 @@ man components for the emacs package.
 
 %prep
 %setup -q -n emacs-26.3
+cd %{_builddir}/emacs-26.3
 %patch1 -p1
 
 %build
@@ -109,7 +111,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1567484526
+export SOURCE_DATE_EPOCH=1573771887
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -122,19 +124,19 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1567484526
+export SOURCE_DATE_EPOCH=1573771887
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/emacs
-cp COPYING %{buildroot}/usr/share/package-licenses/emacs/COPYING
-cp etc/COPYING %{buildroot}/usr/share/package-licenses/emacs/etc_COPYING
-cp leim/COPYING %{buildroot}/usr/share/package-licenses/emacs/leim_COPYING
-cp lib-src/COPYING %{buildroot}/usr/share/package-licenses/emacs/lib-src_COPYING
-cp lib/COPYING %{buildroot}/usr/share/package-licenses/emacs/lib_COPYING
-cp lisp/COPYING %{buildroot}/usr/share/package-licenses/emacs/lisp_COPYING
-cp lwlib/COPYING %{buildroot}/usr/share/package-licenses/emacs/lwlib_COPYING
-cp msdos/COPYING %{buildroot}/usr/share/package-licenses/emacs/msdos_COPYING
-cp nt/COPYING %{buildroot}/usr/share/package-licenses/emacs/nt_COPYING
-cp src/COPYING %{buildroot}/usr/share/package-licenses/emacs/src_COPYING
+cp %{_builddir}/emacs-26.3/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
+cp %{_builddir}/emacs-26.3/etc/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
+cp %{_builddir}/emacs-26.3/leim/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
+cp %{_builddir}/emacs-26.3/lib-src/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
+cp %{_builddir}/emacs-26.3/lib/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
+cp %{_builddir}/emacs-26.3/lisp/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
+cp %{_builddir}/emacs-26.3/lwlib/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
+cp %{_builddir}/emacs-26.3/msdos/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
+cp %{_builddir}/emacs-26.3/nt/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
+cp %{_builddir}/emacs-26.3/src/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}/var/games/emacs/snake-scores
@@ -4060,11 +4062,72 @@ rm -f %{buildroot}/usr/share/applications/emacs.desktop
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/*.h
+/usr/include/emacs-module.h
 
-%files doc
+%files info
 %defattr(0644,root,root,0755)
-%doc /usr/share/info/*
+/usr/share/info/ada-mode.info.gz
+/usr/share/info/auth.info.gz
+/usr/share/info/autotype.info.gz
+/usr/share/info/bovine.info.gz
+/usr/share/info/calc.info.gz
+/usr/share/info/ccmode.info.gz
+/usr/share/info/cl.info.gz
+/usr/share/info/dbus.info.gz
+/usr/share/info/dired-x.info.gz
+/usr/share/info/ebrowse.info.gz
+/usr/share/info/ede.info.gz
+/usr/share/info/ediff.info.gz
+/usr/share/info/edt.info.gz
+/usr/share/info/efaq.info.gz
+/usr/share/info/eieio.info.gz
+/usr/share/info/eintr.info.gz
+/usr/share/info/elisp.info.gz
+/usr/share/info/emacs-gnutls.info.gz
+/usr/share/info/emacs-mime.info.gz
+/usr/share/info/emacs.info.gz
+/usr/share/info/epa.info.gz
+/usr/share/info/erc.info.gz
+/usr/share/info/ert.info.gz
+/usr/share/info/eshell.info.gz
+/usr/share/info/eudc.info.gz
+/usr/share/info/eww.info.gz
+/usr/share/info/flymake.info.gz
+/usr/share/info/forms.info.gz
+/usr/share/info/gnus.info.gz
+/usr/share/info/htmlfontify.info.gz
+/usr/share/info/idlwave.info.gz
+/usr/share/info/ido.info.gz
+/usr/share/info/info.info.gz
+/usr/share/info/mairix-el.info.gz
+/usr/share/info/message.info.gz
+/usr/share/info/mh-e.info.gz
+/usr/share/info/newsticker.info.gz
+/usr/share/info/nxml-mode.info.gz
+/usr/share/info/octave-mode.info.gz
+/usr/share/info/org.info.gz
+/usr/share/info/pcl-cvs.info.gz
+/usr/share/info/pgg.info.gz
+/usr/share/info/rcirc.info.gz
+/usr/share/info/reftex.info.gz
+/usr/share/info/remember.info.gz
+/usr/share/info/sasl.info.gz
+/usr/share/info/sc.info.gz
+/usr/share/info/semantic.info.gz
+/usr/share/info/ses.info.gz
+/usr/share/info/sieve.info.gz
+/usr/share/info/smtpmail.info.gz
+/usr/share/info/speedbar.info.gz
+/usr/share/info/srecode.info.gz
+/usr/share/info/todo-mode.info.gz
+/usr/share/info/tramp.info.gz
+/usr/share/info/url.info.gz
+/usr/share/info/vhdl-mode.info.gz
+/usr/share/info/vip.info.gz
+/usr/share/info/viper.info.gz
+/usr/share/info/widget.info.gz
+/usr/share/info/wisent.info.gz
+/usr/share/info/woman.info.gz
 
 %files libexec
 %defattr(-,root,root,-)
@@ -4075,16 +4138,7 @@ rm -f %{buildroot}/usr/share/applications/emacs.desktop
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/emacs/COPYING
-/usr/share/package-licenses/emacs/etc_COPYING
-/usr/share/package-licenses/emacs/leim_COPYING
-/usr/share/package-licenses/emacs/lib-src_COPYING
-/usr/share/package-licenses/emacs/lib_COPYING
-/usr/share/package-licenses/emacs/lisp_COPYING
-/usr/share/package-licenses/emacs/lwlib_COPYING
-/usr/share/package-licenses/emacs/msdos_COPYING
-/usr/share/package-licenses/emacs/nt_COPYING
-/usr/share/package-licenses/emacs/src_COPYING
+/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
 
 %files man
 %defattr(0644,root,root,0755)
