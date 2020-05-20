@@ -6,10 +6,10 @@
 #
 Name     : emacs
 Version  : 26.3
-Release  : 40
+Release  : 41
 URL      : https://mirrors.kernel.org/gnu/emacs/emacs-26.3.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/emacs/emacs-26.3.tar.xz
-Source1 : https://mirrors.kernel.org/gnu/emacs/emacs-26.3.tar.xz.sig
+Source1  : https://mirrors.kernel.org/gnu/emacs/emacs-26.3.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GPL-3.0 GPL-3.0+
@@ -111,20 +111,20 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573771887
+export SOURCE_DATE_EPOCH=1589992630
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
-%configure --disable-static --without-xft --without-m17n-flt --without-libotf --without-xaw3d --with-x-toolkit=no --with-sound=no
+%configure --disable-static --without-xft --without-m17n-flt --without-libotf --without-xaw3d --with-x-toolkit=no --with-sound=no --with-modules
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1573771887
+export SOURCE_DATE_EPOCH=1589992630
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/emacs
 cp %{_builddir}/emacs-26.3/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615

@@ -1,12 +1,10 @@
 # This file contains recursive sources that require this package
 autoconf
-automake
 compat-guile-soname20
 compat-libidn-soname11
-emacs-x11
+compat-protobuf-soname21
 gettext
 global
-gnuplot
 gpm
 guile
 libidn

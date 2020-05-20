@@ -12,6 +12,7 @@ Configure miss: main in -lXbsd
 Configure miss: lgetfilecon in -lselinux
 Configure miss: jpeglib 6b or later
 Configure miss: LCMS2
+Configure miss: dlfunc
 Configure miss: maillock in -lmail
 Configure miss: maillock in -llockfile
 Configure miss: liblockfile.so
