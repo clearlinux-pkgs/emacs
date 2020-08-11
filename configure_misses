@@ -1,7 +1,8 @@
 Configure miss: xcrun
 Configure miss: whether the compiler is clang
+Configure miss: setfattr
+Configure miss: paxctl
 Configure miss: brew
-Configure miss: -znocombreloc
 Configure miss: whether addresses are sanitized
 Configure miss: coff.h
 Configure miss: malloc/malloc.h
@@ -43,4 +44,3 @@ Configure miss: working re_compile_pattern
 Configure miss: sig2str
 Configure miss: whether localtime loops forever near extrema
 Configure miss: timezone_t
-Configure miss: gcc option to disable position independent executables
