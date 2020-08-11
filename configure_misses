@@ -1,17 +1,18 @@
 Configure miss: xcrun
 Configure miss: whether the compiler is clang
-Configure miss: setfattr
-Configure miss: paxctl
+Configure miss: brew
+Configure miss: -znocombreloc
 Configure miss: whether addresses are sanitized
 Configure miss: coff.h
 Configure miss: malloc/malloc.h
+Configure miss: sys/fs_types.h
 Configure miss: struct ifreq.ifr_addr.sa_len
 Configure miss: X
 Configure miss: whether malloc is Doug Lea style
 Configure miss: main in -lXbsd
 Configure miss: lgetfilecon in -lselinux
-Configure miss: jpeglib 6b or later
-Configure miss: LCMS2
+Configure miss: libsystemd >= 222
+Configure miss: jansson >= 2.7
 Configure miss: dlfunc
 Configure miss: maillock in -lmail
 Configure miss: maillock in -llockfile
@@ -19,6 +20,9 @@ Configure miss: liblockfile.so
 Configure miss: maillock.h usability
 Configure miss: maillock.h presence
 Configure miss: maillock.h
+Configure miss: timer_getoverrun
+Configure miss: whether pthread_setname_np takes a single argument
+Configure miss: whether pthread_setname_np takes three arguments
 Configure miss: whether GLib is linked in
 Configure miss: st_dm_mode in struct stat
 Configure miss: whether strmode is declared
@@ -29,5 +33,14 @@ Configure miss: acl_create_entry_np
 Configure miss: acl_to_short_text
 Configure miss: acl_free_text
 Configure miss: ACL_TYPE_EXTENDED
+Configure miss: whether to use statvfs64
+Configure miss: sys/fs/s5param.h usability
+Configure miss: sys/fs/s5param.h presence
+Configure miss: sys/fs/s5param.h
+Configure miss: statfs that truncates block counts
+Configure miss: whether pthread_sigmask is a macro
+Configure miss: working re_compile_pattern
 Configure miss: sig2str
+Configure miss: whether localtime loops forever near extrema
 Configure miss: timezone_t
+Configure miss: gcc option to disable position independent executables

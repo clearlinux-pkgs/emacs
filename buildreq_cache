@@ -1,9 +1,8 @@
-26.3
+27.1
 acl-dev
+gmp-dev
 gpm-dev
-llvm
+lcms2-dev
 ncurses-dev
 pkgconfig(zlib)
-systemd-dev
 valgrind
-zlib-dev
