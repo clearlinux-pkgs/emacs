@@ -3,3 +3,4 @@
 # automatically. One name per line, no whitespace.
 #
 gnutls-dev
+jansson-dev

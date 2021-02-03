@@ -1,8 +1,5 @@
 # This file contains recursive sources that require this package
 autoconf
-compat-guile-soname20
-compat-libidn-soname11
-compat-protobuf-soname21
 compat-protobuf-soname22
 gettext
 global
