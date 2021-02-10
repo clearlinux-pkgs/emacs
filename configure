@@ -5,4 +5,4 @@
 --with-x-toolkit=no
 --with-sound=no
 --with-modules
---with-dumping=unexec
+--enable-link-time-optimization
