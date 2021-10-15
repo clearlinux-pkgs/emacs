@@ -1,4 +1,4 @@
-From aeae2a92802f49426d8f3c1964739b044a13e0cb Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Thiago Macieira <thiago.macieira@intel.com>
 Date: Tue, 14 May 2019 15:57:19 -0700
 Subject: [PATCH] Make the emacs compiled without X11 call the one compiled
@@ -10,10 +10,10 @@ Signed-off-by: Thiago Macieira <thiago.macieira@intel.com>
  1 file changed, 6 insertions(+)
 
 diff --git a/src/emacs.c b/src/emacs.c
-index 41a9327941..a6401a2fbf 100644
+index 67220eb..7304c66 100644
 --- a/src/emacs.c
 +++ b/src/emacs.c
-@@ -1384,6 +1384,12 @@ Using an Emacs configured with --with-x-toolkit=lucid does not have this problem
+@@ -1724,6 +1724,12 @@ Using an Emacs configured with --with-x-toolkit=lucid does not have this problem
  
      skip_args = count_before;
    }
@@ -26,6 +26,3 @@ index 41a9327941..a6401a2fbf 100644
  #endif
  
    /* argmatch must not be used after here,
--- 
-2.21.0
-

@@ -1,8 +1,6 @@
 libacl.so.1
-libanl.so.1
 libc.so.6
 libdbus-1.so.3
-libdl.so.2
 libgcc_s.so.1
 libgmp.so.10
 libgnutls.so.30
@@ -10,8 +8,6 @@ libgpm.so.2
 libjansson.so.4
 liblcms2.so.2
 libm.so.6
-libpthread.so.0
-librt.so.1
 libtinfo.so.6
 libxml2.so.2
 libz.so.1

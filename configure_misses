@@ -21,6 +21,7 @@ Configure miss: maillock.h presence
 Configure miss: maillock.h usability
 Configure miss: main in -lXbsd
 Configure miss: malloc/malloc.h
+Configure miss: pthread library
 Configure miss: sig2str
 Configure miss: st_dm_mode in struct stat
 Configure miss: statfs that truncates block counts
@@ -29,9 +30,9 @@ Configure miss: sys/fs/s5param.h
 Configure miss: sys/fs/s5param.h presence
 Configure miss: sys/fs/s5param.h usability
 Configure miss: sys/fs_types.h
-Configure miss: timer_getoverrun
 Configure miss: timezone_t
 Configure miss: whether GLib is linked in
+Configure miss: whether __sys_siglist is declared
 Configure miss: whether addresses are sanitized
 Configure miss: whether localtime loops forever near extrema
 Configure miss: whether malloc is Doug Lea style
@@ -39,6 +40,7 @@ Configure miss: whether pthread_setname_np takes a single argument
 Configure miss: whether pthread_setname_np takes three arguments
 Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether strmode is declared
+Configure miss: whether sys_siglist is declared
 Configure miss: whether the compiler is clang
 Configure miss: whether to use statvfs64
 Configure miss: working re_compile_pattern
