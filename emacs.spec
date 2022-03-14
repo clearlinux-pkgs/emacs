@@ -6,7 +6,7 @@
 #
 Name     : emacs
 Version  : 27.2
-Release  : 47
+Release  : 48
 URL      : https://mirrors.kernel.org/gnu/emacs/emacs-27.2.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/emacs/emacs-27.2.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/emacs/emacs-27.2.tar.xz.sig
@@ -30,6 +30,7 @@ BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(dbus-1)
 BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(zlib)
+BuildRequires : systemd-dev
 BuildRequires : valgrind
 Patch1: 0001-Make-the-emacs-compiled-without-X11-call-the-one-com.patch
 Patch2: 0002-Port-alternate-signal-stack-to-upcoming-glibc-2.34.patch
@@ -114,7 +115,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1634272497
+export SOURCE_DATE_EPOCH=1647279580
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -134,7 +135,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1634272497
+export SOURCE_DATE_EPOCH=1647279580
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/emacs
 cp %{_builddir}/emacs-27.2/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615

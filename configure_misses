@@ -13,7 +13,6 @@ Configure miss: dlfunc
 Configure miss: gcc option to disable position independent executables
 Configure miss: lgetfilecon in -lselinux
 Configure miss: liblockfile.so
-Configure miss: libsystemd >= 222
 Configure miss: maillock in -llockfile
 Configure miss: maillock in -lmail
 Configure miss: maillock.h

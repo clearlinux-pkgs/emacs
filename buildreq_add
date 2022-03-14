@@ -8,3 +8,5 @@ jansson-dev
 lcms2-dev
 ncurses-dev
 valgrind
+systemd-dev
+acl-dev
