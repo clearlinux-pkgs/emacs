@@ -1,6 +1,7 @@
 Configure miss: -znocombreloc
 Configure miss: ACL_TYPE_EXTENDED
 Configure miss: X
+Configure miss: __lsan_ignore_object
 Configure miss: acl_copy_ext_native
 Configure miss: acl_create_entry_np
 Configure miss: acl_delete_fd_np
@@ -9,10 +10,12 @@ Configure miss: acl_free_text
 Configure miss: acl_to_short_text
 Configure miss: brew
 Configure miss: coff.h
+Configure miss: compiler option needed when checking for declarations
 Configure miss: dlfunc
 Configure miss: gcc option to disable position independent executables
 Configure miss: lgetfilecon in -lselinux
 Configure miss: liblockfile.so
+Configure miss: libseccomp >= 2.5.2
 Configure miss: maillock in -llockfile
 Configure miss: maillock in -lmail
 Configure miss: maillock.h
@@ -20,27 +23,32 @@ Configure miss: maillock.h presence
 Configure miss: maillock.h usability
 Configure miss: main in -lXbsd
 Configure miss: malloc/malloc.h
+Configure miss: memset_s
+Configure miss: posix_spawn_file_actions_addchdir
 Configure miss: pthread library
+Configure miss: pthread_set_name_np
+Configure miss: sched_getaffinity_np
 Configure miss: sig2str
-Configure miss: st_dm_mode in struct stat
 Configure miss: statfs that truncates block counts
 Configure miss: struct ifreq.ifr_addr.sa_len
 Configure miss: sys/fs/s5param.h
 Configure miss: sys/fs/s5param.h presence
 Configure miss: sys/fs/s5param.h usability
 Configure miss: sys/fs_types.h
+Configure miss: sys/sysctl.h
+Configure miss: sys/sysmp.h
+Configure miss: sysctl
+Configure miss: sysmp
 Configure miss: timezone_t
 Configure miss: whether GLib is linked in
-Configure miss: whether __sys_siglist is declared
 Configure miss: whether addresses are sanitized
-Configure miss: whether localtime loops forever near extrema
 Configure miss: whether malloc is Doug Lea style
 Configure miss: whether pthread_setname_np takes a single argument
 Configure miss: whether pthread_setname_np takes three arguments
 Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether strmode is declared
-Configure miss: whether sys_siglist is declared
 Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether to use statvfs64
-Configure miss: working re_compile_pattern
 Configure miss: xcrun

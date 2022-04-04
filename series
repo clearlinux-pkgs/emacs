@@ -1,2 +1,1 @@
 0001-Make-the-emacs-compiled-without-X11-call-the-one-com.patch
-0002-Port-alternate-signal-stack-to-upcoming-glibc-2.34.patch
