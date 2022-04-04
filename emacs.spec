@@ -4,7 +4,7 @@
 #
 Name     : emacs
 Version  : 28.1
-Release  : 50
+Release  : 51
 URL      : https://mirrors.kernel.org/gnu/emacs/emacs-28.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/emacs/emacs-28.1.tar.xz
 Summary  : No detailed summary available
@@ -109,7 +109,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1649081867
+export SOURCE_DATE_EPOCH=1649086664
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -129,7 +129,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1649081867
+export SOURCE_DATE_EPOCH=1649086664
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/emacs
 cp %{_builddir}/emacs-28.1/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615
@@ -149,6 +149,9 @@ rm -f %{buildroot}*/var/games/emacs/tetris-scores
 rm -f %{buildroot}*/usr/bin/ctags
 rm -f %{buildroot}*/usr/bin/etags
 rm -f %{buildroot}*/usr/share/applications/emacs.desktop
+rm -f %{buildroot}*/usr/share/applications/emacs-mail.desktop
+rm -f %{buildroot}*/usr/share/applications/emacsclient-mail.desktop
+rm -f %{buildroot}*/usr/share/applications/emacsclient.desktop
 
 %files
 %defattr(-,root,root,-)
@@ -163,9 +166,6 @@ rm -f %{buildroot}*/usr/share/applications/emacs.desktop
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/applications/emacs-mail.desktop
-/usr/share/applications/emacsclient-mail.desktop
-/usr/share/applications/emacsclient.desktop
 /usr/share/emacs/28.1/etc/AUTHORS
 /usr/share/emacs/28.1/etc/CALC-NEWS
 /usr/share/emacs/28.1/etc/COPYING

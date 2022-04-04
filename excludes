@@ -7,3 +7,6 @@
 
 # xemacs package will install the desktop file.
 /usr/share/applications/emacs.desktop
+/usr/share/applications/emacs-mail.desktop
+/usr/share/applications/emacsclient-mail.desktop
+/usr/share/applications/emacsclient.desktop
