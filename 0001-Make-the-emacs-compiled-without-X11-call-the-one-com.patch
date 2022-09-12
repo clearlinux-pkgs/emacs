@@ -10,10 +10,10 @@ Signed-off-by: Thiago Macieira <thiago.macieira@intel.com>
  1 file changed, 6 insertions(+)
 
 diff --git a/src/emacs.c b/src/emacs.c
-index 67220eb..7304c66 100644
+index 0a90b09..e48af2a 100644
 --- a/src/emacs.c
 +++ b/src/emacs.c
-@@ -1724,6 +1724,12 @@ Using an Emacs configured with --with-x-toolkit=lucid does not have this problem
+@@ -2008,6 +2008,12 @@ Using an Emacs configured with --with-x-toolkit=lucid does not have this problem
  
      skip_args = count_before;
    }
