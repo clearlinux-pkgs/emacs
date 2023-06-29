@@ -1,5 +1,5 @@
 PKG_NAME := emacs
-URL = https://mirrors.kernel.org/gnu/emacs/emacs-28.2.tar.xz
+URL = https://alpha.gnu.org/gnu/emacs/pretest/emacs-29.0.92.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common

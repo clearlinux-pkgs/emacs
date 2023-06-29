@@ -8,6 +8,7 @@ libgpm.so.2
 libjansson.so.4
 liblcms2.so.2
 libm.so.6
+libsqlite3.so.0
 libsystemd.so.0
 libtinfo.so.6
 libxml2.so.2
