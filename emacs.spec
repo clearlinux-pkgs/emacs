@@ -7,7 +7,7 @@
 #
 Name     : emacs
 Version  : 29.0.92
-Release  : 53
+Release  : 54
 URL      : https://alpha.gnu.org/gnu/emacs/pretest/emacs-29.0.92.tar.xz
 Source0  : https://alpha.gnu.org/gnu/emacs/pretest/emacs-29.0.92.tar.xz
 Source1  : https://alpha.gnu.org/gnu/emacs/pretest/emacs-29.0.92.tar.xz.sig
