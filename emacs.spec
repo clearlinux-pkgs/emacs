@@ -7,7 +7,7 @@
 #
 Name     : emacs
 Version  : 29.0.92
-Release  : 55
+Release  : 56
 URL      : https://alpha.gnu.org/gnu/emacs/pretest/emacs-29.0.92.tar.xz
 Source0  : https://alpha.gnu.org/gnu/emacs/pretest/emacs-29.0.92.tar.xz
 Source1  : https://alpha.gnu.org/gnu/emacs/pretest/emacs-29.0.92.tar.xz.sig
@@ -118,7 +118,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689015567
+export SOURCE_DATE_EPOCH=1689797753
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -138,7 +138,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonl
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1689015567
+export SOURCE_DATE_EPOCH=1689797753
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/emacs
 cp %{_builddir}/emacs-%{version}/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615 || :
@@ -4382,7 +4382,7 @@ rm -f %{buildroot}*/usr/share/applications/emacsclient.desktop
 
 %files libexec
 %defattr(-,root,root,-)
-/usr/libexec/emacs/29.0.92/x86_64-generic-linux-gnu/emacs-b1d8ee48ef0c985b309ccc0ba43ebda9d9b4cb609a83de1ce86e7a8d0ad6f78a.pdmp
+/usr/libexec/emacs/29.0.92/x86_64-generic-linux-gnu/emacs-15627cacf07b486ed433a517ce827698948c0812a85edcacdc2e516f9d304222.pdmp
 /usr/libexec/emacs/29.0.92/x86_64-generic-linux-gnu/hexl
 /usr/libexec/emacs/29.0.92/x86_64-generic-linux-gnu/movemail
 /usr/libexec/emacs/29.0.92/x86_64-generic-linux-gnu/rcs2log
