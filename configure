@@ -6,3 +6,4 @@
 --with-sound=no
 --with-modules
 --enable-link-time-optimization
+--with-native-compilation=aot
