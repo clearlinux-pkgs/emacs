@@ -9,7 +9,7 @@
 #
 Name     : emacs
 Version  : 29.3
-Release  : 61
+Release  : 62
 URL      : https://ftpmirror.gnu.org/emacs/emacs-29.3.tar.xz
 Source0  : https://ftpmirror.gnu.org/emacs/emacs-29.3.tar.xz
 Source1  : https://ftpmirror.gnu.org/emacs/emacs-29.3.tar.xz.sig
@@ -121,7 +121,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711393573
+export SOURCE_DATE_EPOCH=1711481349
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -182,7 +182,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711393573
+export SOURCE_DATE_EPOCH=1711481349
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/emacs
 cp %{_builddir}/emacs-%{version}/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615 || :
@@ -7438,7 +7438,7 @@ rm -f %{buildroot}*/usr/share/applications/emacsclient.desktop
 %defattr(-,root,root,-)
 /V3/usr/libexec/emacs/29.3/x86_64-generic-linux-gnu/hexl
 /V3/usr/libexec/emacs/29.3/x86_64-generic-linux-gnu/movemail
-/usr/libexec/emacs/29.3/x86_64-generic-linux-gnu/emacs-4ed75daeae8d5c3dc89ea403e2aef7f86ab6a99750a808646d4752efabebcb2b.pdmp
+/usr/libexec/emacs/29.3/x86_64-generic-linux-gnu/emacs-68f3f8988f8c895b09892f5bc1864e07d463435b0c5e607221e7a07b635f4f90.pdmp
 /usr/libexec/emacs/29.3/x86_64-generic-linux-gnu/hexl
 /usr/libexec/emacs/29.3/x86_64-generic-linux-gnu/movemail
 /usr/libexec/emacs/29.3/x86_64-generic-linux-gnu/rcs2log
