@@ -9,7 +9,7 @@
 #
 Name     : emacs
 Version  : 29.3
-Release  : 60
+Release  : 61
 URL      : https://ftpmirror.gnu.org/emacs/emacs-29.3.tar.xz
 Source0  : https://ftpmirror.gnu.org/emacs/emacs-29.3.tar.xz
 Source1  : https://ftpmirror.gnu.org/emacs/emacs-29.3.tar.xz.sig
