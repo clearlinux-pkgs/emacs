@@ -10,3 +10,4 @@ ncurses-dev
 valgrind
 systemd-dev
 acl-dev
+texinfo

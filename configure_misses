@@ -29,7 +29,6 @@ Configure miss: pthread_set_name_np
 Configure miss: sched_getaffinity_np
 Configure miss: sig2str
 Configure miss: statfs that truncates block counts
-Configure miss: stdckdint.h
 Configure miss: struct ifreq.ifr_addr.sa_len
 Configure miss: sys/fs/s5param.h
 Configure miss: sys/fs_types.h

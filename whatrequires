@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 autoconf
 compat-protobuf-soname29
+compat-protobuf-soname32
 gettext
 global
 gpm
