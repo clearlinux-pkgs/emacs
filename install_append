@@ -1,0 +1,2 @@
+pdmp_file="$(basename %{buildroot}/usr/libexec/emacs/%version/x86_64-generic-linux-gnu/emacs-*.pdmp)"
+ln -s "${pdmp_file}" %{buildroot}/usr/libexec/emacs/%version/x86_64-generic-linux-gnu/emacs.pdmp

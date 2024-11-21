@@ -9,7 +9,7 @@
 #
 Name     : emacs
 Version  : 29.4
-Release  : 67
+Release  : 68
 URL      : https://ftpmirror.gnu.org/emacs/emacs-29.4.tar.xz
 Source0  : https://ftpmirror.gnu.org/emacs/emacs-29.4.tar.xz
 Source1  : https://ftpmirror.gnu.org/emacs/emacs-29.4.tar.xz.sig
@@ -128,7 +128,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1731462389
+export SOURCE_DATE_EPOCH=1732218177
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -170,7 +170,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1731462389
+export SOURCE_DATE_EPOCH=1732218177
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/emacs
 cp %{_builddir}/emacs-%{version}/COPYING %{buildroot}/usr/share/package-licenses/emacs/31a3d460bb3c7d98845187c716a30db81c44b615 || :
@@ -195,6 +195,10 @@ rm -f %{buildroot}*/usr/share/applications/emacs.desktop
 rm -f %{buildroot}*/usr/share/applications/emacs-mail.desktop
 rm -f %{buildroot}*/usr/share/applications/emacsclient-mail.desktop
 rm -f %{buildroot}*/usr/share/applications/emacsclient.desktop
+## install_append content
+pdmp_file="$(basename %{buildroot}/usr/libexec/emacs/%version/x86_64-generic-linux-gnu/emacs-*.pdmp)"
+ln -s "${pdmp_file}" %{buildroot}/usr/libexec/emacs/%version/x86_64-generic-linux-gnu/emacs.pdmp
+## install_append end
 
 %files
 %defattr(-,root,root,-)
@@ -5917,6 +5921,7 @@ rm -f %{buildroot}*/usr/share/applications/emacsclient.desktop
 %files libexec
 %defattr(-,root,root,-)
 /usr/libexec/emacs/29.4/x86_64-generic-linux-gnu/emacs-29.4.pdmp
+/usr/libexec/emacs/29.4/x86_64-generic-linux-gnu/emacs.pdmp
 /usr/libexec/emacs/29.4/x86_64-generic-linux-gnu/hexl
 /usr/libexec/emacs/29.4/x86_64-generic-linux-gnu/movemail
 /usr/libexec/emacs/29.4/x86_64-generic-linux-gnu/rcs2log
