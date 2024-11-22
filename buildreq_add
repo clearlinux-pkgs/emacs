@@ -11,3 +11,4 @@ valgrind
 systemd-dev
 acl-dev
 texinfo
+tree-sitter-dev

@@ -37,8 +37,6 @@ Configure miss: sys/sysmp.h
 Configure miss: sysctl
 Configure miss: sysmp
 Configure miss: timezone_t
-Configure miss: tree-sitter >= 0.20.2
-Configure miss: tree-sitter >= 0.6.3
 Configure miss: whether GLib is linked in
 Configure miss: whether addresses are sanitized
 Configure miss: whether ctype.h defines __header_inline
