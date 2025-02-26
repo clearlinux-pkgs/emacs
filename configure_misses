@@ -1,5 +1,8 @@
+Configure miss:  option for large files
+Configure miss:  option for timestamps after 2038
 Configure miss: -znocombreloc
 Configure miss: ACL_TYPE_EXTENDED
+Configure miss: OS.h
 Configure miss: X
 Configure miss: __lsan_ignore_object
 Configure miss: acl_copy_ext_native
@@ -13,7 +16,10 @@ Configure miss: brew
 Configure miss: coff.h
 Configure miss: compiler option needed when checking for declarations
 Configure miss: dlfunc
+Configure miss: explicit_memset
 Configure miss: gcc option to disable position independent executables
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: if endian.h defines stdint types
 Configure miss: lgetfilecon in -lselinux
 Configure miss: liblockfile.so
 Configure miss: libseccomp >= 2.5.2
@@ -22,6 +28,7 @@ Configure miss: maillock in -lmail
 Configure miss: maillock.h
 Configure miss: main in -lXbsd
 Configure miss: malloc/malloc.h
+Configure miss: memset_explicit
 Configure miss: memset_s
 Configure miss: posix_spawn_file_actions_addchdir
 Configure miss: pthread library
@@ -30,6 +37,8 @@ Configure miss: sched_getaffinity_np
 Configure miss: sig2str
 Configure miss: statfs that truncates block counts
 Configure miss: struct ifreq.ifr_addr.sa_len
+Configure miss: struct utmpx.ut_exit.ut_exit
+Configure miss: struct utmpx.ut_exit.ut_termination
 Configure miss: sys/fs/s5param.h
 Configure miss: sys/fs_types.h
 Configure miss: sys/sysctl.h
@@ -37,10 +46,13 @@ Configure miss: sys/sysmp.h
 Configure miss: sysctl
 Configure miss: sysmp
 Configure miss: timezone_t
+Configure miss: unreachable
 Configure miss: whether GLib is linked in
+Configure miss: whether MB_CUR_MAX is defined to function that won't link
 Configure miss: whether addresses are sanitized
 Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether malloc is Doug Lea style
+Configure miss: whether nullptr_t needs <stddef.h>
 Configure miss: whether pthread_setname_np takes a single argument
 Configure miss: whether pthread_setname_np takes three arguments
 Configure miss: whether pthread_sigmask is a macro
@@ -50,4 +62,5 @@ Configure miss: whether the compiler is clang
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether to use statvfs64
 Configure miss: working nanosleep
+Configure miss: xattr library with ATTR_ACTION_PERMISSIONS
 Configure miss: xcrun
